@@ -34,6 +34,8 @@ class orders(models.Model):
 		('Pending', 'Pending'),
 		('Approved', 'Approved'),
 		('Denied', 'Denied'),
+		('Dispatched','Dispatched'),
+		('Completed','Completed'),
 	) 
 	order_status = models.CharField(max_length=10,choices=STATUS_OPTIONS)
 	order_total = models.IntegerField()
