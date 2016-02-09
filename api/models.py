@@ -42,6 +42,7 @@ class orders(models.Model):
 	client = models.ForeignKey(User,related_name='%(class)s_user_id')
 
 class order_products(models.Model):
+	orderid = models.ForeignKey(orders,related_name='order')
 	postertp = models.ForeignKey(poster_type,related_name='type')
 	mat = models.ForeignKey(materials,related_name='material')
 	billing = models.ForeignKey(addresses,related_name='billing_info')
