@@ -13,7 +13,7 @@ class posterTypeSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
 		model = poster_type
 
-class addressesSerializer(serializers.HyperlinkedModelSerializer):
+class addressesSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = addresses
 
