@@ -19,6 +19,7 @@ class payment_method(models.Model):
 	payment = models.CharField(max_length=20)
 
 class addresses(models.Model):
+	title = models.CharField(max_length=50)
 	first_name = models.CharField(max_length=20)
 	last_name = models.CharField(max_length=20)
 	phone = models.IntegerField()
@@ -28,6 +29,7 @@ class addresses(models.Model):
 	postal_code = models.IntegerField()
 	address_name = models.CharField(max_length=50)
 	created = DateTimeField(auto_now_add=True, blank=True)
+	user = models.ForeignKey(User,related_name='user')
 
 class orders(models.Model):
 	STATUS_OPTIONS = (
