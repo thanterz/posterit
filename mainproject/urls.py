@@ -23,6 +23,10 @@ router.register(r'api/payment_methdod',views.paymentMethodViewSet)
 router.register(r'api/poster_type',views.posterTypeViewSet)
 router.register(r'api/addresses',views.addressesViewSet)
 router.register(r'api/orders',views.ordersViewSet)
+router.register(r'api/user/(?P<uid>\d+)/orders',views.userordersViewSet,base_name="orders")
+router.register(r'api/products',views.orderProductsViewSet)
+router.register(r'api/materials',views.materialsViewSet)
+router.register(r'api/user/(?P<uid>\d+)/addresses',views.useraddressesViewSet,base_name="addresses")
 
 
 urlpatterns = [

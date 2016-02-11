@@ -17,6 +17,10 @@ class addressesSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = addresses
 
+class useraddressesSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = addresses
+
 class ordersSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = orders
